@@ -11,19 +11,41 @@ public class Post {
     private String replyPostId; // идентификатор записи, в ответ на которую была оставлена текущая
     private String friendsOnly; // 1, если запись была создана с опцией «Только для друзей»
 
+    public String commentsInfo(int count, boolean canPost, boolean groupsCanPost, boolean canClose, boolean canOpen) {
+        return null;
+    }
+
     private String copyright; //источник материала
+
+    public String likesInfo(int count, boolean userLikes, boolean canLike, boolean canPublish) {
+        return null;
+    }
+
+    public String repostsInfo(int count, boolean userReposted) {
+        return null;
+    }
+
+    public String viewsInfo(int count) {
+        return null;
+    }
 
     private String postType; //тип записи
 
+    public String postSource( String type, String platform, String data, String url) {
+        return  null;     }
+
+    public String geo(String type, String coordinates) {
+        return null;
+    }
+
     private String signerId; //идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем
-    private int canPin; // информация о том, может ли текущий пользователь закрепить запись (1 — может, 0 — не может)
-    private int canDelete; //информация о том, может ли текущий пользователь удалить запись (1 — может, 0 — не может)
-    private int canEdit; //информация о том, может ли текущий пользователь редактировать запись (1 — может, 0 — не может)
+    private boolean canPin; // информация о том, может ли текущий пользователь закрепить запись (1 — может, 0 — не может)
+    private boolean canDelete; //информация о том, может ли текущий пользователь удалить запись (1 — может, 0 — не может)
+    private boolean canEdit; //информация о том, может ли текущий пользователь редактировать запись (1 — может, 0 — не может)
     private int isPinned; //информация о том, что запись закреплена
-    private int markedAsAds; //информация о том, содержит ли запись отметку "реклама" (1 — да, 0 — нет)
+    private boolean markedAsAds; //информация о том, содержит ли запись отметку "реклама" (1 — да, 0 — нет)
     private boolean isFavorite; //true, если объект добавлен в закладки у текущего пользователя
     private int postponedId; //идентификатор отложенной записи. Это поле возвращается тогда, когда запись стояла на таймере
-
 
     public String getId() {
         return id;
@@ -121,27 +143,27 @@ public class Post {
         this.signerId = signerId;
     }
 
-    public int getCanPin() {
+    public boolean isCanPin() {
         return canPin;
     }
 
-    public void setCanPin(int canPin) {
+    public void setCanPin(boolean canPin) {
         this.canPin = canPin;
     }
 
-    public int getCanDelete() {
+    public boolean isCanDelete() {
         return canDelete;
     }
 
-    public void setCanDelete(int canDelete) {
+    public void setCanDelete(boolean canDelete) {
         this.canDelete = canDelete;
     }
 
-    public int getCanEdit() {
+    public boolean isCanEdit() {
         return canEdit;
     }
 
-    public void setCanEdit(int canEdit) {
+    public void setCanEdit(boolean canEdit) {
         this.canEdit = canEdit;
     }
 
@@ -153,11 +175,11 @@ public class Post {
         this.isPinned = isPinned;
     }
 
-    public int getMarkedAsAds() {
+    public boolean isMarkedAsAds() {
         return markedAsAds;
     }
 
-    public void setMarkedAsAds(int markedAsAds) {
+    public void setMarkedAsAds(boolean markedAsAds) {
         this.markedAsAds = markedAsAds;
     }
 
