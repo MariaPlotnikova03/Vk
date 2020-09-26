@@ -10,34 +10,14 @@ public class Post {
     private String replyOwnerId; // идентификатор владельца записи, в ответ на которую была оставлена текущая
     private String replyPostId; // идентификатор записи, в ответ на которую была оставлена текущая
     private String friendsOnly; // 1, если запись была создана с опцией «Только для друзей»
-
-    public String commentsInfo(int count, boolean canPost, boolean groupsCanPost, boolean canClose, boolean canOpen) {
-        return null;
-    }
-
+    private String commentsInfo;
     private String copyright; //источник материала
-
-    public String likesInfo(int count, boolean userLikes, boolean canLike, boolean canPublish) {
-        return null;
-    }
-
-    public String repostsInfo(int count, boolean userReposted) {
-        return null;
-    }
-
-    public String viewsInfo(int count) {
-        return null;
-    }
-
+    private String likesInfo;
+    private String repostsInfo;
+    private String viewsInfo;
     private String postType; //тип записи
-
-    public String postSource( String type, String platform, String data, String url) {
-        return  null;     }
-
-    public String geo(String type, String coordinates) {
-        return null;
-    }
-
+    private String postSource;
+    private String geo;
     private String signerId; //идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем
     private boolean canPin; // информация о том, может ли текущий пользователь закрепить запись (1 — может, 0 — не может)
     private boolean canDelete; //информация о том, может ли текущий пользователь удалить запись (1 — может, 0 — не может)
@@ -119,6 +99,14 @@ public class Post {
         this.friendsOnly = friendsOnly;
     }
 
+    public String getCommentsInfo() {
+        return commentsInfo;
+    }
+
+    public void setCommentsInfo(String commentsInfo) {
+        this.commentsInfo = commentsInfo;
+    }
+
     public String getCopyright() {
         return copyright;
     }
@@ -127,12 +115,52 @@ public class Post {
         this.copyright = copyright;
     }
 
+    public String getLikesInfo() {
+        return likesInfo;
+    }
+
+    public void setLikesInfo(String likesInfo) {
+        this.likesInfo = likesInfo;
+    }
+
+    public String getRepostsInfo() {
+        return repostsInfo;
+    }
+
+    public void setRepostsInfo(String repostsInfo) {
+        this.repostsInfo = repostsInfo;
+    }
+
+    public String getViewsInfo() {
+        return viewsInfo;
+    }
+
+    public void setViewsInfo(String viewsInfo) {
+        this.viewsInfo = viewsInfo;
+    }
+
     public String getPostType() {
         return postType;
     }
 
     public void setPostType(String postType) {
         this.postType = postType;
+    }
+
+    public String getPostSource() {
+        return postSource;
+    }
+
+    public void setPostSource(String postSource) {
+        this.postSource = postSource;
+    }
+
+    public String getGeo() {
+        return geo;
+    }
+
+    public void setGeo(String geo) {
+        this.geo = geo;
     }
 
     public String getSignerId() {
