@@ -10,14 +10,14 @@ public class Post {
     private String replyOwnerId; // идентификатор владельца записи, в ответ на которую была оставлена текущая
     private String replyPostId; // идентификатор записи, в ответ на которую была оставлена текущая
     private String friendsOnly; // 1, если запись была создана с опцией «Только для друзей»
-    private String commentsInfo;
+    private CommentsInfo commentsInfo;
     private String copyright; //источник материала
-    private String likesInfo;
-    private String repostsInfo;
-    private String viewsInfo;
+    private LikesInfo likesInfo;
+    private RepostsInfo repostsInfo;
+    private ViewsInfo viewsInfo;
     private String postType; //тип записи
-    private String postSource;
-    private String geo;
+    private PostSource postSource;
+    private Geo geo;
     private String signerId; //идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем
     private boolean canPin; // информация о том, может ли текущий пользователь закрепить запись (1 — может, 0 — не может)
     private boolean canDelete; //информация о том, может ли текущий пользователь удалить запись (1 — может, 0 — не может)
@@ -99,11 +99,11 @@ public class Post {
         this.friendsOnly = friendsOnly;
     }
 
-    public String getCommentsInfo() {
+    public CommentsInfo getCommentsInfo() {
         return commentsInfo;
     }
 
-    public void setCommentsInfo(String commentsInfo) {
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
         this.commentsInfo = commentsInfo;
     }
 
@@ -115,27 +115,27 @@ public class Post {
         this.copyright = copyright;
     }
 
-    public String getLikesInfo() {
+    public LikesInfo getLikesInfo() {
         return likesInfo;
     }
 
-    public void setLikesInfo(String likesInfo) {
+    public void setLikesInfo(LikesInfo likesInfo) {
         this.likesInfo = likesInfo;
     }
 
-    public String getRepostsInfo() {
+    public RepostsInfo getRepostsInfo() {
         return repostsInfo;
     }
 
-    public void setRepostsInfo(String repostsInfo) {
+    public void setRepostsInfo(RepostsInfo repostsInfo) {
         this.repostsInfo = repostsInfo;
     }
 
-    public String getViewsInfo() {
+    public ViewsInfo getViewsInfo() {
         return viewsInfo;
     }
 
-    public void setViewsInfo(String viewsInfo) {
+    public void setViewsInfo(ViewsInfo viewsInfo) {
         this.viewsInfo = viewsInfo;
     }
 
@@ -147,19 +147,19 @@ public class Post {
         this.postType = postType;
     }
 
-    public String getPostSource() {
+    public PostSource getPostSource() {
         return postSource;
     }
 
-    public void setPostSource(String postSource) {
+    public void setPostSource(PostSource postSource) {
         this.postSource = postSource;
     }
 
-    public String getGeo() {
+    public Geo getGeo() {
         return geo;
     }
 
-    public void setGeo(String geo) {
+    public void setGeo(Geo geo) {
         this.geo = geo;
     }
 
